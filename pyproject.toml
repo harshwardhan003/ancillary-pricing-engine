@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ancillary-pricing-engine"
+version = "0.1.0"
+description = "Margin-aware pricing and sort engine for ancillary products, with an MLOps layer (synthetic data)."
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "fastapi>=0.110", "uvicorn>=0.29", "pydantic>=2.6"]
+
+[project.optional-dependencies]
+dev = ["pandas", "scikit-learn>=1.4", "scipy>=1.11", "matplotlib>=3.8", "pytest>=8", "httpx>=0.27", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src", "."]
+include = ["ancillary*", "api*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+src = ["src", "api", "tests"]

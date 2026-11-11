@@ -1,0 +1,40 @@
+name: ci
+on:
+  push: {branches: [main]}
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11", cache: pip}
+      - run: pip install -r requirements-dev.txt
+      - run: ruff check src api tests
+      - run: pytest -q
+      - name: Train and evaluate on a small sample (smoke test of the whole pipeline)
+        run: |
+          export PYTHONPATH=src
+          python -m ancillary.train --sessions 30000 --out artifacts --skip-gbm
+          python -m ancillary.evaluate --artifacts artifacts --quick
+      - uses: actions/upload-artifact@v4
+        with: {name: model-and-results, path: artifacts/}
+
+  image:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: model-and-results, path: artifacts/}
+      - run: docker build -t ancillary-engine:${{ github.sha }} .
+      - name: Smoke test the container
+        run: |
+          docker run -d --name api -p 8000:8000 ancillary-engine:${{ github.sha }}
+          for i in $(seq 1 20); do curl -sf localhost:8000/health && break || sleep 1; done
+          curl -sf localhost:8000/health | grep '"status":"ok"'
+      # Deployment to AWS is described in docs/aws.md and is intentionally not
+      # enabled here: it needs an AWS account and an OIDC role.
+      # - uses: aws-actions/configure-aws-credentials@v4 ...
+      # - uses: aws-actions/amazon-ecr-login@v2 ...

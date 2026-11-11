@@ -1,0 +1,395 @@
+{
+  "model_version": "lr-v2-partners",
+  "partners": {
+    "Ryanair": {
+      "lam": 5.0,
+      "markup_min": 0.08,
+      "markup_max": 0.32,
+      "conv_floor": 0.05,
+      "share": 0.3,
+      "kind": "Low-fare airline",
+      "slug": "ryanair",
+      "chosen": {
+        "lam": 5,
+        "margin_uplift": 0.3250523136936072,
+        "conversion_change": 0.0937109667285041,
+        "mean_markup": 0.20676833333333336
+      },
+      "sweep": [
+        {
+          "lam": 0,
+          "margin_uplift": 0.3581703678745485,
+          "conversion_change": -0.07756640510629909,
+          "mean_markup": 0.25064000000000003
+        },
+        {
+          "lam": 5,
+          "margin_uplift": 0.3250523136936072,
+          "conversion_change": 0.0937109667285041,
+          "mean_markup": 0.20676833333333336
+        },
+        {
+          "lam": 10,
+          "margin_uplift": 0.2594711624047892,
+          "conversion_change": 0.26096431666183006,
+          "mean_markup": 0.17000266666666666
+        },
+        {
+          "lam": 15,
+          "margin_uplift": 0.18239275763704077,
+          "conversion_change": 0.38920273330518373,
+          "mean_markup": 0.14392533333333335
+        },
+        {
+          "lam": 20,
+          "margin_uplift": 0.10843304633026651,
+          "conversion_change": 0.48000110982914235,
+          "mean_markup": 0.126115
+        },
+        {
+          "lam": 30,
+          "margin_uplift": -0.011343880431165854,
+          "conversion_change": 0.5889382738312823,
+          "mean_markup": 0.10506233333333334
+        },
+        {
+          "lam": 40,
+          "margin_uplift": -0.09288954412421047,
+          "conversion_change": 0.6435951198992875,
+          "mean_markup": 0.09442966666666668
+        },
+        {
+          "lam": 60,
+          "margin_uplift": -0.1832720389652509,
+          "conversion_change": 0.6883914685605881,
+          "mean_markup": 0.08538466666666666
+        }
+      ]
+    },
+    "easyJet": {
+      "lam": 0.0,
+      "markup_min": 0.08,
+      "markup_max": 0.32,
+      "conv_floor": 0.05,
+      "share": 0.3,
+      "kind": "Low-fare airline",
+      "slug": "easyjet",
+      "chosen": {
+        "lam": 0,
+        "margin_uplift": 0.3652413721023535,
+        "conversion_change": -0.031885488696932085,
+        "mean_markup": 0.23897200000000005
+      },
+      "sweep": [
+        {
+          "lam": 0,
+          "margin_uplift": 0.3652413721023535,
+          "conversion_change": -0.031885488696932085,
+          "mean_markup": 0.23897200000000005
+        },
+        {
+          "lam": 5,
+          "margin_uplift": 0.31659746654681564,
+          "conversion_change": 0.13669530029168664,
+          "mean_markup": 0.19341233333333335
+        },
+        {
+          "lam": 10,
+          "margin_uplift": 0.2362922788378985,
+          "conversion_change": 0.2960299214990827,
+          "mean_markup": 0.15666433333333338
+        },
+        {
+          "lam": 15,
+          "margin_uplift": 0.1481545634180368,
+          "conversion_change": 0.414449453975136,
+          "mean_markup": 0.13153633333333334
+        },
+        {
+          "lam": 20,
+          "margin_uplift": 0.06606917822580427,
+          "conversion_change": 0.4967974441191849,
+          "mean_markup": 0.11505933333333336
+        },
+        {
+          "lam": 30,
+          "margin_uplift": -0.061929488564163804,
+          "conversion_change": 0.5912789390659854,
+          "mean_markup": 0.09679966666666667
+        },
+        {
+          "lam": 40,
+          "margin_uplift": -0.14472601444776934,
+          "conversion_change": 0.6349283812710707,
+          "mean_markup": 0.08846333333333334
+        },
+        {
+          "lam": 60,
+          "margin_uplift": -0.2274670497690945,
+          "conversion_change": 0.6660424496985284,
+          "mean_markup": 0.08233633333333334
+        }
+      ]
+    },
+    "Southwest Airlines": {
+      "lam": 30.0,
+      "markup_min": 0.08,
+      "markup_max": 0.4,
+      "conv_floor": 0.03,
+      "share": 0.3,
+      "kind": "Loyalty-led airline",
+      "slug": "southwest",
+      "chosen": {
+        "lam": 30,
+        "margin_uplift": 0.39876776054793117,
+        "conversion_change": 0.07149497305161212,
+        "mean_markup": 0.21292133333333338
+      },
+      "sweep": [
+        {
+          "lam": 0,
+          "margin_uplift": 0.6403098073344469,
+          "conversion_change": -0.26259712715075656,
+          "mean_markup": 0.37214066666666673
+        },
+        {
+          "lam": 5,
+          "margin_uplift": 0.6259732595631551,
+          "conversion_change": -0.22100162902757992,
+          "mean_markup": 0.3476510000000001
+        },
+        {
+          "lam": 10,
+          "margin_uplift": 0.6007569252650973,
+          "conversion_change": -0.16651892316929495,
+          "mean_markup": 0.3187206666666667
+        },
+        {
+          "lam": 15,
+          "margin_uplift": 0.5630985206475334,
+          "conversion_change": -0.10500733047658672,
+          "mean_markup": 0.28885733333333335
+        },
+        {
+          "lam": 20,
+          "margin_uplift": 0.5144173474881875,
+          "conversion_change": -0.042331703409163035,
+          "mean_markup": 0.26056533333333337
+        },
+        {
+          "lam": 30,
+          "margin_uplift": 0.39876776054793117,
+          "conversion_change": 0.07149497305161212,
+          "mean_markup": 0.21292133333333338
+        },
+        {
+          "lam": 40,
+          "margin_uplift": 0.27784413397780816,
+          "conversion_change": 0.16175655656565358,
+          "mean_markup": 0.17762200000000003
+        },
+        {
+          "lam": 60,
+          "margin_uplift": 0.06750232433267356,
+          "conversion_change": 0.28040785461933027,
+          "mean_markup": 0.13352033333333335
+        }
+      ]
+    },
+    "Qantas": {
+      "lam": 15.0,
+      "markup_min": 0.08,
+      "markup_max": 0.44,
+      "conv_floor": 0.05,
+      "share": 0.3,
+      "kind": "Flag carrier",
+      "slug": "qantas",
+      "chosen": {
+        "lam": 15,
+        "margin_uplift": 0.43806988894631016,
+        "conversion_change": -0.019326863914002845,
+        "mean_markup": 0.24472233333333338
+      },
+      "sweep": [
+        {
+          "lam": 0,
+          "margin_uplift": 0.5360357562701235,
+          "conversion_change": -0.2672891904504091,
+          "mean_markup": 0.35374533333333336
+        },
+        {
+          "lam": 5,
+          "margin_uplift": 0.5190186097838352,
+          "conversion_change": -0.19267888523437926,
+          "mean_markup": 0.31663366666666676
+        },
+        {
+          "lam": 10,
+          "margin_uplift": 0.48616716709336294,
+          "conversion_change": -0.10674353864769437,
+          "mean_markup": 0.27908299999999997
+        },
+        {
+          "lam": 15,
+          "margin_uplift": 0.43806988894631016,
+          "conversion_change": -0.019326863914002845,
+          "mean_markup": 0.24472233333333338
+        },
+        {
+          "lam": 20,
+          "margin_uplift": 0.37974222588015083,
+          "conversion_change": 0.06166582610579985,
+          "mean_markup": 0.21521099999999999
+        },
+        {
+          "lam": 30,
+          "margin_uplift": 0.2516922497695997,
+          "conversion_change": 0.19341922778748732,
+          "mean_markup": 0.170803
+        },
+        {
+          "lam": 40,
+          "margin_uplift": 0.12992970010397698,
+          "conversion_change": 0.28640880489203346,
+          "mean_markup": 0.14148600000000003
+        },
+        {
+          "lam": 60,
+          "margin_uplift": -0.058983183879032675,
+          "conversion_change": 0.39349562660440873,
+          "mean_markup": 0.109278
+        }
+      ]
+    },
+    "Airbnb": {
+      "lam": 10.0,
+      "markup_min": 0.08,
+      "markup_max": 0.36,
+      "conv_floor": 0.05,
+      "share": 0.3,
+      "kind": "Travel marketplace",
+      "slug": "airbnb",
+      "chosen": {
+        "lam": 10,
+        "margin_uplift": 0.390243300067062,
+        "conversion_change": 0.0077130137396417275,
+        "mean_markup": 0.24581299999999998
+      },
+      "sweep": [
+        {
+          "lam": 0,
+          "margin_uplift": 0.4441826277724499,
+          "conversion_change": -0.20311496197396017,
+          "mean_markup": 0.31050900000000003
+        },
+        {
+          "lam": 5,
+          "margin_uplift": 0.42732124889542256,
+          "conversion_change": -0.10223596080724773,
+          "mean_markup": 0.277828
+        },
+        {
+          "lam": 10,
+          "margin_uplift": 0.390243300067062,
+          "conversion_change": 0.0077130137396417275,
+          "mean_markup": 0.24581299999999998
+        },
+        {
+          "lam": 15,
+          "margin_uplift": 0.3421601856760619,
+          "conversion_change": 0.10360878380025729,
+          "mean_markup": 0.21869000000000002
+        },
+        {
+          "lam": 20,
+          "margin_uplift": 0.29014125660429557,
+          "conversion_change": 0.1827696629484732,
+          "mean_markup": 0.19638300000000006
+        },
+        {
+          "lam": 30,
+          "margin_uplift": 0.18829322498241807,
+          "conversion_change": 0.3009306967206793,
+          "mean_markup": 0.16323100000000001
+        },
+        {
+          "lam": 40,
+          "margin_uplift": 0.09887712907672008,
+          "conversion_change": 0.3804496465324958,
+          "mean_markup": 0.140914
+        },
+        {
+          "lam": 60,
+          "margin_uplift": -0.03720700277538436,
+          "conversion_change": 0.4749300927588931,
+          "mean_markup": 0.11425700000000001
+        }
+      ]
+    },
+    "eDreams ODIGEO": {
+      "lam": 0.0,
+      "markup_min": 0.08,
+      "markup_max": 0.28,
+      "conv_floor": 0.1,
+      "share": 0.3,
+      "kind": "Online travel agency",
+      "slug": "edreams",
+      "chosen": {
+        "lam": 0,
+        "margin_uplift": 0.3278860894034985,
+        "conversion_change": 0.0169179159717332,
+        "mean_markup": 0.22245466666666674
+      },
+      "sweep": [
+        {
+          "lam": 0,
+          "margin_uplift": 0.3278860894034985,
+          "conversion_change": 0.0169179159717332,
+          "mean_markup": 0.22245466666666674
+        },
+        {
+          "lam": 5,
+          "margin_uplift": 0.2888265064026092,
+          "conversion_change": 0.2262835706301598,
+          "mean_markup": 0.1787866666666667
+        },
+        {
+          "lam": 10,
+          "margin_uplift": 0.2122268382227428,
+          "conversion_change": 0.419826873974243,
+          "mean_markup": 0.14437933333333333
+        },
+        {
+          "lam": 15,
+          "margin_uplift": 0.1298822453060866,
+          "conversion_change": 0.5525749794756711,
+          "mean_markup": 0.122381
+        },
+        {
+          "lam": 20,
+          "margin_uplift": 0.058019761974731354,
+          "conversion_change": 0.6375554063676041,
+          "mean_markup": 0.108569
+        },
+        {
+          "lam": 30,
+          "margin_uplift": -0.048918435319746933,
+          "conversion_change": 0.7288933939020812,
+          "mean_markup": 0.09380833333333333
+        },
+        {
+          "lam": 40,
+          "margin_uplift": -0.11484208269962193,
+          "conversion_change": 0.7689164672048234,
+          "mean_markup": 0.08712766666666666
+        },
+        {
+          "lam": 60,
+          "margin_uplift": -0.17922624315491587,
+          "conversion_change": 0.7964959970086309,
+          "mean_markup": 0.082166
+        }
+      ]
+    }
+  }
+}
