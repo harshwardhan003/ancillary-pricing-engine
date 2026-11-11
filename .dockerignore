@@ -1,0 +1,13 @@
+.git
+__pycache__
+*.pyc
+.pytest_cache
+tests
+docs
+artifacts/*.png
+artifacts/results.json
+.venv
+.ruff_cache
+*.md
+artifacts/model_mlp.json
+artifacts/train_metrics.json
